@@ -5,12 +5,20 @@ Vue.use(Vuex)
 
 export function createStore () {
   return new Vuex.Store({
-    state: {},
+    state: {
+      title: null
+    },
 
     actions: {},
 
-    mutations: {},
+    mutations: {
+      title: (state, payload) => {
+        state.title = payload
+      }
+    },
 
-    getters: {}
+    getters: {
+      title: state => state.title
+    }
   })
 }
